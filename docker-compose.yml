@@ -1,0 +1,18 @@
+version: "3"
+services:
+  mooproxy:
+    build: .
+    ports:
+      - "7777:7777"
+    environment:
+      LISTEN_PORT: "7777"
+      MOO_CONNECT_STRING: "co username password"
+      MOO_HOST: "example.moo.mud.org"
+      MOO_PORT: "8888"
+      MOO_AUTOLOGIN: "true"
+      MOO_AUTORECONNECT: "true"
+      MOO_COMMANDSTRING: ","
+      MOO_STRICT_COMMANDS: "true"
+      MOO_INFOSTRING: "%c%% "
+      MOO_NEWINFOSTRING: "%C%% "
+
